@@ -1,0 +1,41 @@
+.cards {
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid var(--Neutral-Light-gray);
+  border-radius: .5em;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.card:hover {
+  border-color: var(--Primary-Purplish-blue);
+}
+
+.card.selected {
+  background-color: var(--Neutral-Magnolia);
+  border-color: var(--Primary-Purplish-blue);
+  pointer-events: none;
+}
+
+.card img {
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  color: var(--Primary-Marine-blue);
+  margin-bottom: .5em;
+}
+
+.card__price {
+  color: var(--Neutral-Cool-gray);
+}
+
+.card__gift {
+  margin-top: .5em;
+  color: var(--Primary-Marine-blue);
+}

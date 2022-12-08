@@ -1,0 +1,41 @@
+.add {
+  border: 2px solid var(--Neutral-Light-gray);
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.add:hover {
+  border-color: var(--Primary-Purplish-blue);
+}
+
+.add.selected {
+  background-color: var(--Neutral-Magnolia);
+  border-color: var(--Primary-Purplish-blue);
+}
+
+.add input {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 2rem ;
+  cursor: pointer;
+}
+
+.add__text h2 {
+  color: var(--Primary-Marine-blue);
+  font-size: 1.25rem;
+}
+
+.add__text p {
+  color: var(--Neutral-Cool-gray);
+}
+
+.add__price {
+  color: var(--Primary-Purplish-blue);
+  font-weight: 700;
+  margin-left: auto;
+}

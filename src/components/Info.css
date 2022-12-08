@@ -1,0 +1,17 @@
+.info__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.info__form input{
+  margin: .5em 0 2em;
+  padding: .75em;
+  border: 1px solid var(--Neutral-Light-gray);
+  border-radius: .25em;
+  background-color: transparent;
+  transition: all .3s;
+}
+
+.info__form input:target {
+  border-color: var(--Primary-Marine-blue);
+}
