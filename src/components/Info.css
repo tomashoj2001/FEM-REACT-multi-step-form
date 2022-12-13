@@ -15,3 +15,17 @@
 .info__form input:target {
   border-color: var(--Primary-Marine-blue);
 }
+
+.info__flex{
+  display: flex;
+}
+
+.value-error {
+  color: var(--Primary-Strawberry-red);
+  margin-left: auto;
+}
+
+.info__form .input-error {
+  border: 2px solid var(--Primary-Strawberry-red);
+  /* outline-color: var(--Primary-Strawberry-red); */
+}
