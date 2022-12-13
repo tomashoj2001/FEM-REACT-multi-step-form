@@ -7,14 +7,15 @@ import Summary from "./components/Summary";
 import Thanks from "./components/Thanks";
 import "./style.css"
 
-// const initialForm = {
-//   name: "",
-//   email: "",
-//   phone: ""
-// }
+const initialForm = {
+  name: "",
+  email: "",
+  phone: ""
+}
 
 function App() {
-  // const [form, setForm] = useState(initialForm)
+  const [form, setForm] = useState(initialForm)
+  const [errors, setErrors] = useState({})
   const [page, setPage] = useState(0)
   const [timeframe, setTimeframe] = useState(0)
   const [plan, setPlan] = useState(0)
@@ -40,10 +41,13 @@ function App() {
       <Nav setPage={setPage} />
       <section className="main__container">
         {page === 0 && 
-          <Info
-            // form={form}
-            // setForm={setForm}
-        />}
+          <Info 
+            form={form}
+            setForm={setForm}
+            errors={errors}
+            setErrors={setErrors}
+          />
+        }
 
         {page === 1 && 
           <Plan 

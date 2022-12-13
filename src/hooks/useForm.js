@@ -1,9 +1,4 @@
-import { useState } from 'react';
-
-export const useForm = (initialForm, validateForm) => {
-  const [form, setForm] = useState(initialForm)
-  const [errors, setErrors] = useState({})
-
+export const useForm = (form, setForm, setErrors, validateForm) => {
   const handleChange = e => {
     const {name, value} = e.target
 
@@ -18,5 +13,5 @@ export const useForm = (initialForm, validateForm) => {
     setErrors(validateForm(form))
   }
 
-  return { form, errors, handleChange, handleBlur }
+  return { handleChange, handleBlur }
 }

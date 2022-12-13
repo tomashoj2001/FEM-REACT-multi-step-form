@@ -27,5 +27,4 @@
 
 .info__form .input-error {
   border: 2px solid var(--Primary-Strawberry-red);
-  /* outline-color: var(--Primary-Strawberry-red); */
 }

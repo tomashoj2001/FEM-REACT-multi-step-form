@@ -1,12 +1,6 @@
 import { useForm } from "../hooks/useForm"
 import "./Info.css"
 
-const initialForm = {
-  name: "",
-  email: "",
-  phone: ""
-}
-
 const validationsForm = (form) => {
   let errors = {}
   let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/
@@ -34,13 +28,12 @@ const validationsForm = (form) => {
   return errors
 }
 
-export default function Info() {
+export default function Info({ form, setForm, errors, setErrors }) {
+  console.log(form)
   const {
-    form, 
-    errors,
     handleChange, 
     handleBlur
-  } = useForm(initialForm, validationsForm)
+  } = useForm(form, setForm, setErrors, validationsForm)
 
   return(
     <>
@@ -86,7 +79,7 @@ export default function Info() {
         </div>
         <input
           className={errors.phone ? "input-error" : ""}
-          type="number"
+          type="text"
           id="phone" 
           name="phone" 
           placeholder="e.g. +1 234 567 890"
@@ -99,67 +92,3 @@ export default function Info() {
     </>
   )
 }
-
-
-// import { useState } from "react"
-// import "./Info.css"
-
-// let initialForm = {
-//   name: "",
-//   email: "",
-//   phone: ""
-// }
-
-// export default function Info() {
-//   const [form, setForm] = useState(initialForm)
-//   const [errors, setErrors] = useState({})
-
-//   const handleBlur = (e) => {
-//     const {name, value} = e.target
-//     setForm({
-//       ...form,
-//       [name]: value
-//     })
-//   }
-
-//   return(
-//     <>
-//       <h1 className="title">Personal info</h1>
-//       <p className="description">Please provide your name, email address and phone number.</p>
-//       <form className="info__form">
-//         <label htmlFor="name">Name</label>
-//         <input
-//           type="text"
-//           id="name" 
-//           name="name" 
-//           placeholder="e.g. Stephen King"
-//           onBlur={handleBlur}
-//           value={form.name}
-//           required
-//         />
-        
-//         <label htmlFor="email">Email Address</label>
-//         <input
-//           type="email"
-//           id="email" 
-//           name="email" 
-//           placeholder="e.g. stephemling@lorem.com"
-//           onBlur={handleBlur}
-//           value={form.email}
-//           required
-//         />
-
-//         <label htmlFor="phone">Phone Number</label>
-//         <input
-//           type="number"
-//           id="phone" 
-//           name="phone" 
-//           placeholder="e.g. +1 234 567 890"
-//           onBlur={handleBlur}
-//           value={form.number}
-//           required
-//         />
-//       </form>
-//     </>
-//   )
-// }
