@@ -16,12 +16,14 @@ export default function PlanCard ({content, timeframe, plan, setPlan, number}) {
       onClick={() => setPlan(number)}
     >
       <img src={content.img} alt={content.title} />
-      <h2 className="card__title">{content.title}</h2>
-      <p className="card__price">{content.price[timeframe]}</p>
-      
-      {timeframe === 1 &&
-        <p className="card__gift">2 month free</p>
-      }
+      <div className="card__content">
+        <h2 className="card__title">{content.title}</h2>
+        <p className="card__price">{content.price[timeframe]}</p>
+        
+        {timeframe === 1 &&
+          <p className="card__gift">2 month free</p>
+        }
+      </div>
     </div>
   )
 }

@@ -37,66 +37,72 @@ function App() {
   }, [page])
 
   return (
+    <>
     <main>
       <Nav setPage={setPage} />
-      <section className="main__container">
-        {page === 0 && 
-          <Info 
-            form={form}
-            setForm={setForm}
-            errors={errors}
-            setErrors={setErrors}
-          />
-        }
+      <div className="container">
+        <section className="main__container">
+          {page === 0 && 
+            <Info 
+              form={form}
+              setForm={setForm}
+              errors={errors}
+              setErrors={setErrors}
+            />
+          }
 
-        {page === 1 && 
-          <Plan 
-            timeframe={timeframe}
-            setTimeframe={setTimeframe} 
-            plan={plan} 
-            setPlan={setPlan} 
-          />
-        }
+          {page === 1 && 
+            <Plan 
+              timeframe={timeframe}
+              setTimeframe={setTimeframe} 
+              plan={plan} 
+              setPlan={setPlan} 
+            />
+          }
 
-        {page === 2 && 
-          <Adds 
-            timeframe={timeframe} 
-            adds={adds} 
-            setAdds={setAdds} 
-          />
-        }
+          {page === 2 && 
+            <Adds 
+              timeframe={timeframe} 
+              adds={adds} 
+              setAdds={setAdds} 
+            />
+          }
+          
+          {page === 3 && <Summary summary={summary} setPage={setPage} />}
+          {page === 4 && <Thanks />}
+        </section>
         
-        {page === 3 && <Summary summary={summary} setPage={setPage} />}
-        {page === 4 && <Thanks />}
-
-        {page > 0 && page !== 4 &&
-          <button
-            className="button left"
-            onClick={() => setPage(page - 1)}
-          >
-            Go back
-          </button>  
+        {page !== 4 &&
+          <section className="buttons">
+            {page > 0 && page !== 4 &&
+              <button
+                className="button left"
+                onClick={() => setPage(page - 1)}
+              >
+                Go back
+              </button>  
+            }
+            {page < 3 &&
+              <button
+              className="button right"
+              onClick={() => setPage(page + 1)}
+              >
+                Next Step
+              </button>  
+            }
+            {page === 3 &&
+              <button
+              className="button right confirm"
+              onClick={() => setPage(page + 1)}
+              >
+                Confirm
+              </button>  
+            }
+          </section>
         }
-
-        {page < 3 &&
-          <button
-            className="button right"
-            onClick={() => setPage(page + 1)}
-          >
-            Next Step
-          </button>  
-        }
-
-        {page === 3 &&
-          <button
-            className="button right confirm"
-            onClick={() => setPage(page + 1)}
-          >
-            Confirm
-          </button>  
-        }
-      </section>
+      </div>
     </main>
+    </>
   );
 }
 

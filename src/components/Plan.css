@@ -39,3 +39,58 @@
   margin-top: .5em;
   color: var(--Primary-Marine-blue);
 }
+
+@media (max-width: 600px) {
+  .cards {
+    /* display: flex; */
+    flex-direction: column;
+    /* gap: 1rem; */
+  }
+
+  .card {
+    /* width: 100%; */
+    /* padding: 1em; */
+    /* border: 1px solid var(--Neutral-Light-gray); */
+    /* border-radius: .5em; */
+    /* cursor: pointer; */
+    /* transition: all .3s; */
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .card:hover {
+    border-color: var(--Neutral-Light-gray);
+  }
+
+  .card.selected {
+    /* background-color: var(--Neutral-Magnolia); */
+    /* border-color: var(--Primary-Purplish-blue); */
+    /* pointer-events: none; */
+  }
+  
+  .card__content {
+    /* margin: 0; */
+  }
+
+  .card img {
+    margin-bottom: 0;
+    height: 3rem;
+  }
+
+  .card__title {
+    /* color: var(--Primary-Marine-blue); */
+    margin-bottom: 0;
+    font-size: 1.25rem;
+  }
+
+  .card__price {
+    /* color: var(--Neutral-Cool-gray); */
+    margin: .2rem 0;
+  }
+
+  .card__gift {
+    margin-top: 0;
+    /* color: var(--Primary-Marine-blue); */
+  }
+}

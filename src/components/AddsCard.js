@@ -19,7 +19,6 @@ export default function AddsCard ({content, timeframe, adds, setAdds}) {
   }, [adds])
 
   const handleClick = (e) => {
-    e.preventDefault()
     const add = [...document.querySelectorAll('.add')]
     const checkbox = [...document.querySelectorAll('.add > input')]
 

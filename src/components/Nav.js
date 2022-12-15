@@ -11,7 +11,7 @@ export default function Nav({ setPage }) {
         >
           1
         </button>
-        <div>
+        <div className="nav__info">
           <h3 className="nav__step">STEP 1</h3>
           <h2 className="nav__title">YOUR INFO</h2>
         </div>
@@ -24,7 +24,7 @@ export default function Nav({ setPage }) {
         >
           2
         </button>
-        <div>
+        <div className="nav__info">
           <h3 className="nav__step">STEP 2</h3>
           <h2 className="nav__title">SELECT PLAN</h2>
         </div>
@@ -37,7 +37,7 @@ export default function Nav({ setPage }) {
         >
           3
         </button>
-        <div>
+        <div className="nav__info">
           <h3 className="nav__step">STEP 3</h3>
           <h2 className="nav__title">ADD-ONS</h2>
         </div>
@@ -50,7 +50,7 @@ export default function Nav({ setPage }) {
         >
           4
         </button>
-        <div>
+        <div className="nav__info">
           <h3 className="nav__step">STEP 4</h3>
           <h2 className="nav__title">SUMMARY</h2>
         </div>
