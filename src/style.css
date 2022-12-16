@@ -59,6 +59,7 @@ main {
 
 .buttons {
   margin-top: auto;
+  margin-bottom: 1.5rem;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -69,7 +70,7 @@ main {
 .button {
   font-size: 1rem;
   font-weight: 500;
-  padding: .5em 1em;
+  padding: .75em 1.25em;
   width: fit-content;
   border: none;
   background-color: transparent;
@@ -79,6 +80,7 @@ main {
 
 .left {
   color: var(--Neutral-Cool-gray);
+  padding-left: 0;
 }
 
 .right {
@@ -137,6 +139,7 @@ main {
   }
 
   .buttons {
+    margin-bottom: 0;
     background-color: var(--Neutral-Alabaster);
     position: fixed;
     bottom: 0;
@@ -153,6 +156,5 @@ main {
 
   .left {
     left: 5%;
-    padding-left: 0;
   }
 }
