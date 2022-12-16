@@ -53,13 +53,10 @@ nav {
 
 @media (max-width: 600px) {
   nav {
-    /* color: var(--White); */
     background-image: url(../assets/images/bg-sidebar-mobile.svg);
     background-size: cover;
-    /* padding: 2em; */
     padding-right: 2em;
     border-radius: 0;
-    /* display: flex; */
     flex-direction: row;
     justify-content: center;
     gap: 1em;
@@ -72,8 +69,6 @@ nav {
   }
   
   .nav__item {
-    /* display: flex; */
-    /* gap: 1em; */
     z-index: 1;
   }
 
@@ -83,37 +78,9 @@ nav {
 
   .nav__btn {
     height: 2rem;
-    /* width: auto; */
-    /* aspect-ratio: 1/1; */
-    /* color: var(--White); */
-    /* border-radius: 50%; */
-    /* border: 1px solid white; */
-    /* background-color: transparent; */
-    /* cursor: pointer; */
-    /* transition: all .3s; */
   }
   
   .nav__btn:hover {
     transform: scale(1);
-  }
-  
-  .nav__btn.selected {
-    /* color: var(--Primary-Marine-blue); */
-    /* background-color: var(--Primary-Light-blue); */
-    /* border-color: var(--Primary-Light-blue); */
-    /* pointer-events: none; */
-  }
-  
-  .nav__step {
-    /* font-size: .75rem; */
-    /* font-weight: 400; */
-    /* color: var(--Neutral-Light-gray); */
-  }
-  
-  .nav__title {
-    /* font-size: 1rem; */
-    /* font-weight: 500; */
-    /* margin-top: .25em; */
-    /* width: max-content; */
   }
 }

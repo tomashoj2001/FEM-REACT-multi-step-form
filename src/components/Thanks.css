@@ -22,24 +22,10 @@
 @media (max-width: 600px) {
   .thanks {
     width: 90%;
-    /* height: 100%; */
-    /* margin: 3rem auto; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
     padding: 4rem 0;
-  }
-  
-  .thanks h2 {
-    /* margin: 2rem auto 1rem; */
-    /* color: var(--Primary-Marine-blue); */
   }
   
   .thanks p {
     font-size: 1.1rem;
-    /* color: var(--Neutral-Cool-gray); */
-    /* text-align: center; */
-    /* line-height: 1.5; */
   }
 }

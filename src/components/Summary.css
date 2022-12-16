@@ -29,11 +29,6 @@
   transition: all .2s;
 }
 
-.summary__plan button:hover {
-  color: var(--Primary-Purplish-blue);
-  text-decoration-color: var(--Primary-Purplish-blue);
-}
-
 .summary__price {  
   color: var(--Primary-Marine-blue);
   font-size: 1.1rem;
@@ -69,76 +64,24 @@
   font-weight: 900;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 601px) {
+  .summary__plan button:hover {
+    color: var(--Primary-Purplish-blue);
+    text-decoration-color: var(--Primary-Purplish-blue);
+  }
+}
 
-  .summary {
-    /* padding: 1.5rem; */
-    /* padding-bottom: 0.1px; */
-    /* border-radius: .5rem; */
-    /* background-color: var(--Neutral-Magnolia); */
-  }
-  
-  .summary__flex {
-    /* display: flex; */
-    /* align-items: center; */
-  }
-  
+@media (max-width: 600px) {  
   .summary__flex--margin {
     margin-bottom: 1rem;
   }
   
-  .summary__title {
-    /* font-weight: 500; */
-    /* color: var(--Primary-Marine-blue); */
-  }
-  
-  .summary__plan button {
-    /* color: var(--Neutral-Cool-gray); */
-    /* background-color: transparent; */
-    /* border: none; */
-    /* padding: .5em 0; */
-    /* text-decoration: underline 1px var(--Neutral-Cool-gray); */
-    /* cursor: pointer; */
-    /* transition: all .2s; */
-  }
-  
-  .summary__plan button:hover {
-    color: var(--Neutral-Cool-gray);
-    text-decoration-color: var(--Neutral-Cool-gray);
-  }
-  
-  .summary__price {  
-    /* color: var(--Primary-Marine-blue); */
-    /* font-size: 1.1rem; */
-    /* font-weight: 500; */
-    /* width: min-content; */
-    /* margin-left: auto; */
-  }
-  
-  .summary__plan + .summary__price {
-    /* color: var(--Primary-Marine-blue); */
-    /* font-weight: 900; */
-  }
-  
   .summary__adds {
-    /* color: var(--Neutral-Cool-gray); */
     padding: 1rem 0;
-    /* border-top: solid 3px var(--Neutral-Light-gray); */
-    /* display: flex; */
-    /* flex-direction: column; */
     gap: 1rem;
   }
   
   .summary__total {
     margin: 1.5rem 0  0;
-    /* display: flex; */
-    /* align-items: center; */
-    /* color: var(--Neutral-Cool-gray); */
-  }
-  
-  .summary__total .summary__price {
-    /* color: var(--Primary-Purplish-blue); */
-    /* font-size: 1rem; */
-    /* font-weight: 900; */
   }
 }
