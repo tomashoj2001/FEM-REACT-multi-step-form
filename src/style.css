@@ -93,7 +93,7 @@ main {
 }
 
 
-@media (min-width: 60px) {
+@media (min-width: 601px) {
   .left:hover {
     color: var(--Primary-Marine-blue);
   }
